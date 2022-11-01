@@ -24,6 +24,7 @@ public class MovieCompareTest extends TestBase {
 	@BeforeTest
 	public void getAndStoreData() throws InterruptedException{
 
+		log.debug("Fetching data from Website 1: Wikipedia");
 		driver.get(config.getProperty("website1"));
 		//type("searchWiki_XPATH", searchMovie_var);
 		driver.findElement(By.xpath(OR.getProperty("searchWiki_XPATH"))).sendKeys(config.getProperty("searchMovie"));
@@ -34,6 +35,7 @@ public class MovieCompareTest extends TestBase {
 		releaseWiki=driver.findElement(By.xpath(OR.getProperty("releaseWiki_XPATH"))).getText();
 		System.out.println(releaseWiki);
 
+		log.debug("Fetching data from Website 2: IMDB");
 		//driver.switchTo().window(driver.getWindowHandle());
 		driver.get(config.getProperty("website2"));
 		//type("searchIMDB_XPATH", searchMovie_var);
@@ -49,7 +51,7 @@ public class MovieCompareTest extends TestBase {
 		System.out.println(countryIMDB);
 		releaseIMDB=driver.findElement(By.xpath(OR.getProperty("releaseIMDB_XPATH"))).getText();
 		System.out.println(releaseIMDB);
-
+		log.debug("Values fetched Successfully");
 		Thread.sleep(5000);
 
 
@@ -57,10 +59,24 @@ public class MovieCompareTest extends TestBase {
 
 		@Test
 		public void compareCountry() throws InterruptedException{
+
+				log.debug("Comparing Country Values");
+				System.out.println(countryWiki);
+				System.out.println(countryIMDB);
 				Assert.assertEquals(countryWiki, countryIMDB);
 		}
 		
 		//type("searchWiki_XPATH", searchMovie_var);
 		//click("searchWikiBtn_XPATH");
+
+
+	@Test
+	public void compareDate() throws InterruptedException{
+
+		log.debug("Comparing Date Values");
+		System.out.println(releaseWiki);
+		System.out.println(releaseIMDB);
+		Assert.assertEquals(countryWiki, countryIMDB);
+	}
 		
 	}

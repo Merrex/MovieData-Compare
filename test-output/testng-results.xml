@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Pushpa-1: The Suite" duration-ms="26170" started-at="2022-11-01T09:36:48Z" finished-at="2022-11-01T09:37:15Z">
+  <suite name="Pushpa-1: The Suite" duration-ms="23317" started-at="2022-11-01T16:42:53Z" finished-at="2022-11-01T16:43:17Z">
     <groups>
     </groups>
-    <test name="Test2" duration-ms="26170" started-at="2022-11-01T09:36:48Z" finished-at="2022-11-01T09:37:15Z">
+    <test name="Test2" duration-ms="23317" started-at="2022-11-01T16:42:53Z" finished-at="2022-11-01T16:43:17Z">
       <class name="MovieCompare.testcases.MovieCompareTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:MovieCompare.testcases.MovieCompareTest@4b741d6d]" name="setUp" is-config="true" duration-ms="2993" started-at="2022-11-01T15:06:45Z" finished-at="2022-11-01T15:06:48Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:MovieCompare.testcases.MovieCompareTest@8f2ef19]" name="setUp" is-config="true" duration-ms="2561" started-at="2022-11-01T22:12:51Z" finished-at="2022-11-01T22:12:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="getAndStoreData()[pri:0, instance:MovieCompare.testcases.MovieCompareTest@4b741d6d]" name="getAndStoreData" is-config="true" duration-ms="26123" started-at="2022-11-01T15:06:48Z" finished-at="2022-11-01T15:07:15Z">
+        <test-method status="PASS" signature="getAndStoreData()[pri:0, instance:MovieCompare.testcases.MovieCompareTest@8f2ef19]" name="getAndStoreData" is-config="true" duration-ms="22950" started-at="2022-11-01T22:12:53Z" finished-at="2022-11-01T22:13:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAndStoreData -->
-        <test-method status="PASS" signature="compareCountry()[pri:0, instance:MovieCompare.testcases.MovieCompareTest@4b741d6d]" name="compareCountry" duration-ms="4" started-at="2022-11-01T15:07:15Z" finished-at="2022-11-01T15:07:15Z">
+        <test-method status="PASS" signature="compareCountry()[pri:0, instance:MovieCompare.testcases.MovieCompareTest@8f2ef19]" name="compareCountry" duration-ms="121" started-at="2022-11-01T22:13:16Z" finished-at="2022-11-01T22:13:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- compareCountry -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:MovieCompare.testcases.MovieCompareTest@4b741d6d]" name="tearDown" is-config="true" duration-ms="1603" started-at="2022-11-01T15:07:15Z" finished-at="2022-11-01T15:07:16Z">
+        <test-method status="PASS" signature="compareDate()[pri:0, instance:MovieCompare.testcases.MovieCompareTest@8f2ef19]" name="compareDate" duration-ms="1" started-at="2022-11-01T22:13:17Z" finished-at="2022-11-01T22:13:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- compareDate -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:MovieCompare.testcases.MovieCompareTest@8f2ef19]" name="tearDown" is-config="true" duration-ms="1178" started-at="2022-11-01T22:13:17Z" finished-at="2022-11-01T22:13:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

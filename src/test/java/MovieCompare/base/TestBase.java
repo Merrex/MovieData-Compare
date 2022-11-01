@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -56,6 +57,7 @@ public class TestBase {
 	@BeforeSuite
 	public void setUp() {
 
+		BasicConfigurator.configure();
 		if (driver == null) {
 
 			try {
@@ -158,5 +160,6 @@ public class TestBase {
 		if (driver != null) {
 			driver.quit();
 		}
+		log.debug("Test Execution Completed !!");
 	}
 }

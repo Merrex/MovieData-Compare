@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,6 +103,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Pushpa-1:_The_Suite" title="MovieCompare.testcases.MovieCompareTest" hash-for-method="compareCountry">compareCountry</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Pushpa-1:_The_Suite" title="MovieCompare.testcases.MovieCompareTest" hash-for-method="compareDate">compareDate</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Pushpa-1:_The_Suite -->
@@ -128,6 +133,13 @@
                   <a name="compareCountry">
                   </a> <!-- compareCountry -->
                   <span class="method-name">compareCountry</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="compareDate">
+                  </a> <!-- compareDate -->
+                  <span class="method-name">compareDate</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -184,16 +196,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'compareCountry')
 data.setCell(0, 2, 'MovieCompare.testcases.MovieCompareTest')
-data.setCell(0, 3, 4);
+data.setCell(0, 3, 121);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'compareDate')
+data.setCell(1, 2, 'MovieCompare.testcases.MovieCompareTest')
+data.setCell(1, 3, 1);
 window.suiteTableData['Pushpa-1:_The_Suite']= { tableData: data, tableDiv: 'times-div-Pushpa-1:_The_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 ms</span>
+              <span class="suite-total-time">Total running time: 122 ms</span>
               <div id="times-div-Pushpa-1:_The_Suite">
               </div> <!-- times-div-Pushpa-1:_The_Suite -->
             </div> <!-- times-div -->
@@ -226,15 +242,19 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">getAndStoreData</span>
-                <span class="method-start">2994 ms</span>
+                <span class="method-start">2561 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">compareCountry</span>
-                <span class="method-start">29156 ms</span>
+                <span class="method-start">25753 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">compareDate</span>
+                <span class="method-start">25875 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">29206 ms</span>
+                <span class="method-start">26376 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
