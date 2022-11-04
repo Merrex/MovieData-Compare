@@ -1,6 +1,7 @@
 package MovieCompare.base;
 
 import java.io.FileInputStream;
+import java.lang.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
@@ -34,9 +35,8 @@ import MovieCompare.util.ExcelReader;
 public class TestBase {
 
 	/*
-	 * WebDriver - done Properties - done Logs - log4j jar, .log,
-	 * log4j.properties, Logger ExtentReports DB Excel Mail ReportNG,
-	 * ExtentReports Jenkins
+	 * WebDriver - done Properties - done Logs - log4j jar, .log, log4j.properties,
+	 * Logger ExtentReports DB Excel Mail ReportNG, ExtentReports Jenkins
 	 * 
 	 */
 
@@ -54,7 +54,6 @@ public class TestBase {
 	public static String searchMovie_var;
 
 
-	@BeforeSuite
 	public void setUp() {
 
 		BasicConfigurator.configure();
@@ -85,30 +84,25 @@ public class TestBase {
 			try {
 				OR.load(fis);
 				log.debug("OR file loaded !!!");
-				searchMovie_var= OR.getProperty("searchMovie");
+				searchMovie_var = OR.getProperty("searchMovie");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			
-			
-			if(System.getenv("browser")!=null && !System.getenv("browser").isEmpty()){
-				
+
+			if (System.getenv("browser") != null && !System.getenv("browser").isEmpty()) {
+
 				browser = System.getenv("browser");
-			}else{
-				
+			} else {
+
 				browser = config.getProperty("browser");
-				
+
 			}
-			
+
 			config.setProperty("browser", browser);
-			
-			
-			
 
 			if (config.getProperty("browser").equals("firefox")) {
-				
+
 				WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
 
@@ -117,10 +111,10 @@ public class TestBase {
 				WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
 				log.debug("Chrome Launched !!!");
-			} 
+			}
 
-			//driver.get(config.getProperty("testsiteurl"));
-			//log.debug("Navigated to : " + config.getProperty("testsiteurl"));
+			// driver.get(config.getProperty("testsiteurl"));
+			// log.debug("Navigated to : " + config.getProperty("testsiteurl"));
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.wait")),
 					TimeUnit.SECONDS);
@@ -141,7 +135,7 @@ public class TestBase {
 
 	}
 
-	public  void type(String locator, String value) {
+	public void type(String locator, String value) {
 
 		if (locator.endsWith("_CSS")) {
 			driver.findElement(By.cssSelector(OR.getProperty(locator))).sendKeys(value);
@@ -153,9 +147,8 @@ public class TestBase {
 
 	}
 
-
 	@AfterSuite
-	public void tearDown() {
+	public void tearDown() throws Exception {
 
 		if (driver != null) {
 			driver.quit();

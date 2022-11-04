@@ -1,28 +1,25 @@
-package MovieCompare.testcases;
+package MovieCompare.base;
 
-import java.util.Hashtable;
-
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.SkipException;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.BeforeSuite;
 
-import MovieCompare.base.TestBase;
-//import MovieCompare.util.TestUtil;
-
-
-
-public class MovieCompareTest extends TestBase {
-
+public class MovieCompareTestBase extends TestBase {
+	
 	public static String countryWiki, countryIMDB, releaseWiki, releaseIMDB;
+	
+	
 
-	@BeforeTest
+		
+		
+		
+	
+	@BeforeSuite
 	public void getAndStoreData() throws InterruptedException{
+		
+		setUp();
 
 		log.debug("Fetching data from Website 1: Wikipedia");
 		driver.get(config.getProperty("website1"));
@@ -53,30 +50,11 @@ public class MovieCompareTest extends TestBase {
 		System.out.println(releaseIMDB);
 		log.debug("Values fetched Successfully");
 		Thread.sleep(5000);
-
-
-	}
-
-		@Test
-		public void compareCountry() throws InterruptedException{
-
-				log.debug("Comparing Country Values");
-				System.out.println(countryWiki);
-				System.out.println(countryIMDB);
-				Assert.assertEquals(countryWiki, countryIMDB);
-		}
 		
-		//type("searchWiki_XPATH", searchMovie_var);
-		//click("searchWikiBtn_XPATH");
-
-
-	@Test
-	public void compareDate() throws InterruptedException{
-
-		log.debug("Comparing Date Values");
-		System.out.println(releaseWiki);
-		System.out.println(releaseIMDB);
-		Assert.assertEquals(countryWiki, countryIMDB);
-	}
 		
+		// type("searchWiki_XPATH", searchMovie_var);
+		// click("searchWikiBtn_XPATH");
+
 	}
+
+}
